@@ -1,0 +1,10 @@
+X = 1:5;
+Y = 1:1000;
+[X,Y] = meshgrid(X,Y);
+Z = 2;
+R = 1.097e7;
+lamda =1./(Z*Z*R*(1./(X.*X)-1./(Y.*Y)))*1e9;
+edges = [400 700];
+h=histogram(lamda,edges);
+h.NumBins =300;
+ylim([0 1]);
