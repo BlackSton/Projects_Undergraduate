@@ -1,0 +1,10 @@
+def c1_select(c)
+    global LC
+    a_s = [] # c1값 배열
+    for i in range(3):
+        a_z = -LC**2 + i*LC**2 # Z축 +- 시키는것
+        a = np.arange(a_z+c-LC-1,a_z+c-LC+2) # x축값 만듬
+        a1 = np.append(a,a+LC) # y축 +
+        a_2 = np.append(a1,a+LC*2) #y축 ++
+        a_s = np.append(a_s,a_2) #z축에 추가
+    return a_s
